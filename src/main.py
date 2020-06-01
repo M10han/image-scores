@@ -17,7 +17,7 @@ def main(data_location='../data/', data_file='input.csv'):
         end = time.time()
 
         score_list.append(score)
-        runtime_list.append(end-start)
+        runtime_list.append(f"{end-start:9f}")
 
     df['similar'] = score_list
     df['elapsed'] = runtime_list

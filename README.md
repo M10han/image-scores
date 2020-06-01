@@ -70,7 +70,7 @@ Now what read_image does is, it extracts the pixel value in sequence for each im
 
 -```/image_matcher/score.py```
 bjorn_score() takes two np arrays of two respective images to calculate the score based on structural similarity. The Structural Similarity Index (SSIM) is a perceptual metric that quantifies the image quality degradation that is caused by processing such as data compression or by losses in data transmission. SIM actually measures the perceptual difference between two similar images.
-* If the shape(height*width*3) of image1 is not equal to shape of image2, the score would be 1 because the images are completely different. 
+* If the shape(```height by width by 3```) of image1 is not equal to shape of image2, the score would be 1 because the images are completely different. 
 * If two images are perfectly similary, the score would be 0. 
 * If two images are structurally similar, the score would be <0.1. 
 * And for other cases, the ssim() from skimage(scikit-image) calculates the scores by taking in two np arrays which were passed as the parameters to the bjorn_score() function. 
